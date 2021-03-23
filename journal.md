@@ -1,0 +1,251 @@
+# cien días de codificación
+
+## Día 1 - 2021-03-21
+
+Este será mi primer día de codificación y de escribir durante 100 días.
+Anteriormente no había encontrado nada que me motivara a codificar por un número de días ni tampoco algo que me mantuviera interesado en llevar un diario de forma constante.
+Decidí entonces buscar en un repositorio de software (GitHub) por un proyecto abierto que desarrolle un editor de texto en mi lenguaje de programación favorito (Python).
+Fue así como encontré el editor [chronoflask](https://github.com/kmbn/chronoflask). 
+Este editor está escrito en Python y usa el microframework Flask para hacer accesible este aplicativo desde un navegador. 
+El proyecto me interesó muchísimo porque se vé sencillo y me permitirá entonces escribir pero también me permitirá adicionar nuevas características al editor de ser necesario.
+Es más, como el editor es sencillo puedo imaginarme su diseño y repensarmelo haciéndolo orientado a microservicios lo que facilitará su extensiblidad. 
+
+Emocionado, hice una copia (cloné el software en términos de Git [https://github.com/josanabr/chronoflask](https://github.com/josanabr/chronoflask)) del software y lo descargué. 
+Sin embargo, he encontrado que el código no compila. 
+**Primer gran escollo.**
+Código de terceros y código muy antiguo (como este es el caso, un código de 4 años) es probable que no pueda compilar. 
+Está bien, no me funcionó, no se ejecutó pero este será el primer escollo a resolver.
+
+**¿Cómo traer a la vida un software antiguo?**
+Lo primero que identifiqué es que una de las librerías que ofrecía problemas estaba bastante desactualizada. 
+Esa librería estaba relacionada con WTForms. 
+Esa librería parece que también tiene algún tipo de asociación con el microframework porque existe un requerimiento de Flask-WTF.
+Hice las averiguaciones de versiones actuales del código y no puse las más recientes sino otras que estuvieran entre las versiones con las que venía el software y las versiones actuales. 
+Fue así como Flask-WTF pasó de 0.9.4 a 0.10 y WTForms de 1.0.5 a 2.0.0.
+
+Una vez se hicieron los ajustes en el `requirements.txt` se lanzo el `pip install -r requirements`, se lanzó la ejecución del aplicativo `python run.py` y funcionó.
+
+Creo que el día de mañana estudiaré un poco el flujo del aplicativo y trataré de entender como funciona WTForms y Flask-WTF. 
+Entre otras cosas creo que ellos se encargan de hacer validación de los usuarios. 
+Es posible que sea un buen momento de actualizar el aplicativo de modo que incorpore otro tipo de librerías para autenticar usuarios.
+
+---
+
+# Ideal del aplicativo
+
+Al identificar las partes funcionales del software, la idea es migrar el software para que sea orientado a servicios.
+
+---
+
+## Día 2 - 2021-03-22
+
+Este es el segundo día de los 100 días que se dedicarán a la codificación. 
+He decidido que dedicaré las primeras partes de este ejercicio diario a revisar las notas del día anterior. 
+De esta manera no solo avanzaré con las notas del nuevo día sino que también depuraré lo que se hizo el día inmediatamente anterior.
+
+Este ejercicio me tomó alrededor de 7 minutos.
+
+<table>
+<tr>
+<th>Tiempo de revision </th>
+</tr>
+<tr>
+<td> 7 minutos </td> 
+</tr>
+</table>
+
+Vale la pena resaltar que este no es solo un ejercicio de codificación sino que también es un ejercicio de escritura.
+El día de hoy es final del segundo puente de lo que va corrido del año.
+Puente para los colombianos es una secuencia de tres días en los cuales no se trabaja, desde el sábado hasta el lunes. 
+Estos puentes son usados por los colombianos para distraerse, salir a pasear, visitar familiareas y en general hacer turismo interno.
+Nosotros, mi esposa, su familia y yo; estuvimos este fin de semana en Pereira. 
+Una de sus tías se encuentra mal de salud y fue la oportunidad para visitarla.
+La señora no está bien de salud pero está rodeada de personas que cuidan de ella.
+Han sido días muy lluviosos en Colombia y hoy en particular hubo inundaciones importantes en una zona importante de la ciudad. 
+Al momento no hay víctimas mortales pero seguro si hay daños y pérdidas materiales.
+
+**Volviendo a la programación** debo decir que he decidido leer el código y pensar cual es la arquitectura del aplicativo.
+Es decir, leer el código e identificar cuales son los elementos funcionales del aplicativo. 
+Hacer un diagrama.
+A continuación identificaré cuantos programas en Python hay:
+
+<table>
+<tr>
+<th> número de líneas </th>
+<th> nombre del archivo </th>
+</tr>
+<tr>
+ <td>4 </td>
+ <td> ./app/admin/__init__.py </td>
+</tr>
+<tr>
+<td> 5 </td>
+<td> ./app/main/__init__.py </td>
+</tr>
+<tr>
+<td> 5 </td> 
+<td>./run.py </td>
+</tr>
+<tr>
+<td> 7 </td>
+<td> ./app/auth/__init__.py </td>
+</tr>
+<tr>
+<td> 7 </td>
+<td> ./app/details.py </td>
+</tr>
+<tr>
+<td> 11 </td>
+<td> ./app/decorators.py </td>
+</tr>
+<tr>
+<td> 14</td>
+<td> ./app/admin/forms.py </td>
+</tr>
+<tr>
+<td> 15 </td>
+<td> ./app/main/errors.py </td>
+</tr>
+<tr>
+<td> 19 </td>
+<td> ./app/mail.py </td>
+</tr>
+<tr>
+<td> 38 </td>
+<td> ./app/db.py </td>
+</tr>
+<tr>
+<td> 41 </td>
+<td> ./app/__init__.py </td>
+</tr>
+<tr>
+<td> 41 </td>
+<td> ./app/main/forms.py </td>
+</tr>
+<tr>
+<td> 42 </td>
+<td>./app/pagination.py </td>
+</tr>
+<tr>
+<td> 44 </td>
+<td> ./app/admin/views.py </td>
+</tr>
+<tr>
+<td> 95 </td>
+<td>./app/parse.py </td>
+</tr>
+<tr>
+<td> 111 </td>
+<td>./app/auth/forms.py </td>
+</tr>
+<tr>
+<td> 144 </td>
+<td> ./app/auth/views.py </td>
+</tr>
+<tr>
+<td> 172 </td>
+<td> ./app/main/views.py </td>
+</tr>
+</table>
+
+Estos son los archivos por orden de aparición
+
+<table>
+<tr>
+<td>1 </td>
+<td>./run.py </td>
+</tr>
+<tr>
+<td>2 </td>
+<td>./app/mail.py </td>
+</tr>
+<tr>
+<td>3 </td>
+<td>./app/db.py </td>
+</tr>
+<tr>
+<td>4 </td>
+<td>./app/auth/__init__.py </td>
+</tr>
+<tr>
+<td>5 </td>
+<td>./app/auth/forms.py </td>
+</tr>
+<tr>
+<td>6 </td>
+<td>./app/auth/views.py </td>
+</tr>
+<tr>
+<td>7 </td>
+<td>./app/admin/__init__.py </td>
+</tr>
+<tr>
+<td>8 </td>
+<td>./app/admin/forms.py </td>
+</tr>
+<tr>
+<td>9 </td>
+<td>./app/admin/views.py </td>
+</tr>
+<tr>
+<td>10 </td>
+<td>./app/__init__.py </td>
+</tr>
+<tr>
+<td>11 </td>
+<td>./app/details.py </td>
+</tr>
+<tr>
+<td>12 </td>
+<td>./app/pagination.py </td>
+</tr>
+<tr>
+<td>13 </td>
+<td>./app/parse.py </td>
+</tr>
+<tr>
+<td>14 </td>
+<td>./app/main/__init__.py </td>
+</tr>
+<tr>
+<td>15 </td>
+<td>./app/main/forms.py </td>
+</tr>
+<tr>
+<td>16 </td>
+<td>./app/main/errors.py </td>
+</tr>
+<tr>
+<td>17 </td>
+<td>./app/main/views.py </td>
+</tr>
+<tr>
+<td>18 </td>
+<td>./app/decorators.py </td>
+</tr>
+      
+</table>
+
+De acuerdo a lo anterior se pueden identificar dos bloques:
+
+* `./run.py`
+* `./app`
+
+El "módulo" `./app` consta de los siguientes elementos:
+
+* `mail.py`
+* `db.py`
+* `auth`
+* `admin`
+* `__init__.py`
+* `details.py`
+* `pagination.py`
+* `parse.py`
+* `main`
+* `decorators`
+
+Aprendí que en el `run.py` hay una línea que hace el import del paquete `app` de este aplicativo. 
+Esto causa que se ejecute lo que está en el archivo `__init__.py`.
+Esto está documentado [aquí](https://docs.python.org/3/reference/import.html#regular-packages).
+
+Mañana estudiaré el `__init__.py` del paquete `app`. 
