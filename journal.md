@@ -260,7 +260,7 @@ Mañana estudiaré el `__init__.py` del paquete `app`.
 
 El día de hoy fue un día con varias tareas administrativas:
 
-* Reuniones para gestionar el proceso de registrar a la Universidad del Valle en AWS Educate. Se habló con Isabella y Alejandro de AWS Educate los cuales me dieron los pasos para llevar a cabo esta actividad. Ya me puse en contacto con Laura Rodríguez para que desde la Universidad me brinden apoyo en lo que requiera.
+* Reuniones para gestionar el proceso de registrar a la Universidad del Valle en AWS Educate. Se habló con Isabella y Alejandro de AWS Educate los cuales me dieron los pasos para llevar a cabo esta actividad. Ya me puse en contacto con Laura Rodríguez para que desde la Universidad me brinden apoyo para llevar a cabo la inscripción de la Universidad en AWS Educate.
 
 * Tuve clase de curso dirigido para validar avances de estudiantes de posgrado que toman el curso.
 
@@ -273,7 +273,7 @@ El día de hoy fue un día con varias tareas administrativas:
 Hoy comencé a leer un libro de Fiodor Dostoievski llamado **Notes from undeground**. 
 El libro parece interesante. 
 Lo que entendí, es que el libro aborda la problemática de un hombre que tiene alguna especie de subconsciente que lo mortifica. 
-En el primer capítulo se describe él mismo (el personaje de la obra) como un hombre enfermo con una enfermedad quizá del hídago por muchos años.
+En el primer capítulo se describe él mismo (el personaje de la obra) como un hombre enfermo con una enfermedad quizá del hídago que lleva consigo  muchos años.
 También se muestra como un hombre recio y con un desprecio por la vida después de los 40 años.
 Parece que será una lectura interesante.
 
@@ -284,7 +284,7 @@ El construir la aplicación de manera modular permite el descomponer la aplicaci
 Este módulo se puede reutilizar en muchas y diferentes aplicaciones.
 
 Observando entonces los *blueprint* que hay en el `__init__.py` se puede intuir que hay al menos tres grandes bloques, el `admin`, el `auth` y el `main`.
-Luego lo que hay son importaciones de vistas y errores, inicialización de algunas configuraciones de la aplicación, puesta a punto del correo y el *boostrap*.
+Luego lo que hay dentro del código del archivo son importaciones de vistas y errores, inicialización de algunas configuraciones de la aplicación, puesta a punto del correo y el *boostrap*.
 
 Para mañana seguiré revisando lo del *blueprint* en [este enlace](https://realpython.com/flask-blueprint/). 
 Quizá me dé tiempo para ver lo de la configuración del objeto `app`([Configuration Handling](https://flask.palletsprojects.com/en/1.1.x/config/)), que significa el constructor `Mail(app)` y lo del `Boostrap(app)`.
@@ -293,9 +293,9 @@ Realmente hoy el avance fue poco pero:
 
 * Hubo avance. Con relación al día anterior observo que he avanzado poco pero he avanzado. Solo he visto el código de `app/__init__.py`. He leido lo del concepto de blueprint en [este enlace](https://realpython.com/flask-blueprint/) y parece que es un recurso muy útil que provee el microframework Flask.
 
-* Aprendí algo nuevo. Cada vez que veo este código sencillo, veo que aprendo algo aún en aplicaciones sencillas. Esto me emociona porque estoy incrementando mi arsenal de conocimiento.
+* Aprendí algo nuevo. Cada vez que veo este código sencillo, veo que aprendo algo aún de aplicaciones sencillas. Esto me emociona porque estoy incrementando mi arsenal de conocimiento.
 
-* Estoy emocionado de aprender de otros. Leer código no es muy diferente de leer libros en el siguiente sentido. Leer libros te permite conocer de puntos de vistas de otras personas. Aprender de sus experiencias, de su sabiduría, de su cultura. Leer código es aprender técnicas de programación, de diseño de aplicaciones, de trucos, de técnicas, etc. Realmente es muy excitante.
+* Estoy emocionado de aprender de otros. Leer código no es muy diferente de leer libros en el siguiente sentido. Leer libros te permite conocer de puntos de vistas de otras personas. Aprender de sus experiencias, de su sabiduría, de su cultura. Leer código es aprender técnicas de programación, de diseño de aplicaciones, de trucos, de técnicas de otras personas. Realmente es muy excitante.
 
 Casi lo olvido, el día de ayer aprendí de los archivo `__init__.py` en [este enlace](https://docs.python.org/3/reference/import.html#regular-packages). 
 El `__init__.py` es un archivo que se localiza dentro de un directorio, que en el contexto de Python, se convierte en un paquete. 
@@ -315,3 +315,49 @@ Lo olvidaba, el tiempo de edición del día anterior fue el siguiente:
 </table>
 
 No estoy seguro la causa pero inicialmente pienso que hubo menos líneas que editar.
+
+## Día 4 - 2021-03-24
+
+La última noche no fue una muy buena noche.
+No dormí también como lo hubiera deseado y me desperté un par de veces en la noche.
+Trato de no ver noticias, sobre todo de política, pero por algunas partes se me cuela información que luego me perturba. 
+Pienso que una de las razones de mi mal dormir es haber hecho esta actividad de escribir y leer sobre Python al final del día. 
+No digo que no lo deba hacer, de hecho me motiva, pero lo que no debería pasar es que esta sea la última actividad del día. 
+Voy a dedicar la última parte de mi día a leer algún tipo de libro con información positiva (Limitless) o practicar el bajo. 
+De hecho tengo que preparar un coro para mañana a mas tardar. 
+
+Hoy, como los últimos miércoles, he sacado el tiempo para visitar a mi mamá. 
+Cuando venía del apartamento a casa de mi mamá estuve pensando en aquello de pre-ocuparme por la situación política del país.
+Creo que hay un candidato que es realmente un dolor de cabeza, es un tipo con un pasado criminal, formó parte de una agrupación terrorista que trató por la fuerza y la violencia acabar con la institucionalidad del país. 
+Este tipo sigue hoy mintiendo, actuando de formas contrarias a las normas y en Colombia tiene un buen número de seguidores.
+En las elecciones pasadas el individuo Petro llegó a segunda vuelta en las elecciones. 
+Es realmente un tipo desagradable, mentiroso y manipulador. 
+Continuamente le miente al país y tan tarde como esta semana se volvió a conocer otros de sus actos de desacato a las normas, debería estar en el país y resulta que está en Italia.
+Nunca informó de su salida del país, ya que lo debe hacer por ser congresista, y solo la noticia que él y su familia tenía COVID y estaba siendo tratado en Italia fue lo que dejó en evidencia su mal proceder.
+
+Si los colombianos por la vía democrática elegimos a un individuo del talente y las mañas de este sujeto, estaremos condenando al país a vivir una suerte similar a la que vive hoy Venezuela.
+Un país con una de las economías más prósperas de la región, con recursos naturales valiosos que cayeron en manos de unas personas incapaces de gestionar una nación, que manejaron el país a partir del amiguismo y hoy está sumido en una crisis que ni en el corto, ni en el mediano plazo; se ve una solución.
+
+Me he desahogado. 
+No debo pre-ocuparme.
+No sé cual será mi futuro, ni el futuro del país.
+Solo soy responsable de mi presente y de mi bien-estar mental, espiritual y físico.
+Invertir en energía en algo incierto, ocupar mi cerebro y mis emociones en algo que no se sabe si será, es una forma de robarme calidad de vida.
+
+He dedicado 5 minutos para revisión lo que escribí el día anterior. 
+No estuvo mal.
+
+<table>
+<tr>
+<th>Tiempo de revision </th>
+</tr>
+<tr>
+<td> 5 minutos </td> 
+</tr>
+</table>
+
+Ahora haré una lista de las cosas que quiero estudiar en un momento:
+
+* `blueprint`, [este enlace](https://realpython.com/flask-blueprint/) 
+* `Mail`
+* `Boostratp`
